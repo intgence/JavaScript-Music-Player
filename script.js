@@ -8,17 +8,12 @@ const progressContainer = document.querySelector('.progress-con')
 const title = document.querySelector('#title')
 const cover = document.querySelector('#cover')
 
-
-// Song titles
 const songs = ['hey', 'summer', 'ukulele']
 
-// Keep track of the songs
 let songIndex = 2
 
-// Initially load song
 loadSong(songs[songIndex])
 
-// Update the song details
 function loadSong(song){
     title.innerText = song
     audio.src=`music/${song}.mp3`
@@ -76,7 +71,6 @@ function setProgress(e){
     audio.currentTime = (clickX/width)*duration
 }
 
-// Event listeners
 playBtn.addEventListener('click', ()=>{
     const isPlaying = music.classList.contains('play')
     if(isPlaying){
